@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script>
+			function changeAdd() {
+				$("#btnDropdown").text("+");
+				$("#opr").val("+");
+			}
+			function changeSub() {
+				$("#btnDropdown").text("-");
+				$("#opr").val("-");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<h1>계산기</h1>
+			<hr>
+			<form action="calc" method="post">
+				첫 번째 값: <input type="text" name="first">
+				<div class="dropdown d-inline">
+					<button type="button" id="btnDropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">+</button>
+					<input type="hidden" id="opr" name="opr" value="+">
+					<div class="dropdown-menu">
+						<p class="dropdown-item" onclick="changeAdd()">+</p>
+						<p class="dropdown-item" onclick="changeSub()">-</p>
+					</div>
+				</div>
+
+				두 번째 값: <input type="text" name="second">
+				<input type="submit" value="계산" class="btn btn-primary">
+				<input type="reset" value="재입력" class="btn btn-primary">
+			</form>
+		</div>
+	</body>
+</html>
