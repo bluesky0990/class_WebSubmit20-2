@@ -8,10 +8,9 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
+		<% request.setCharacterEncoding("utf-8") %>
 		<jsp:useBean id="book" class="ch04.BookBean" scope="request"/>
-		<c:set target="${book}" property="title" value="${param.title}"/>
-		<c:set target="${book}" property="author" value="${param.author}"/>
-		<c:set target="${book}" property="publisher" value="${param.publisher}"/>
+		<jsp:setProperty property="*" name="book"/>
 		
 		<h1>도서 정보</h1>
 		<br>
