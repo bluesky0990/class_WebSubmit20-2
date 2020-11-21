@@ -1,3 +1,3 @@
-8_Ajax.pdf, homework
+8_Ajax.pdf, Homework
 
 https://github.com/bluesky0990/class_AJAXPracPrj20-2
